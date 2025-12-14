@@ -1,0 +1,264 @@
+/* Custom Portfolio Styles */
+:root {
+  --primary-color: #2d3e51;
+  --primary-dark: #17a085;
+  --secondary-color: #2c3e50;
+  --bg-color: #1abc9c;
+}
+
+/* App Layout */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.about {
+  background-color: var(--bg-color);
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* Override Bootstrap primary color */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary-dark {
+  background-color: var(--secondary-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.active {
+  background-color: var(--primary-dark);
+  border-radius: 10px;
+}
+
+
+
+/* Header/Hero Section */
+.hero-section {
+  padding: 6rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+
+  object-fit: cover;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.divider-star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.divider-line {
+  width: 120px;
+  height: 4px;
+  background-color: currentColor;
+}
+
+.divider-icon {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+/* Page Section */
+.page-section {
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.portfolio-item img {
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  background: rgba(26, 188, 156, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1 !important;
+}
+
+/* Service Icons */
+.service-icon {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--primary-color);
+}
+
+.footer-social-btn {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social-btn:hover {
+  background-color: #fff !important;
+  color: var(--primary-color) !important;
+  transform: translateY(-3px);
+}
+
+.footer-copyright {
+  background-color: var(--secondary-color);
+}
+
+/* Form Styles */
+.form-control {
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  box-shadow: none;
+  outline: none;
+}
+
+.form-floating>label {
+  padding: 1rem;
+}
+
+/* Contact Cards */
+.contact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-section {
+    padding: 4rem 0;
+    min-height: auto;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
